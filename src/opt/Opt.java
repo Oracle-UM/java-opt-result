@@ -163,6 +163,10 @@ public final class Opt<T> {
         }
     }
 
+    public final Optional<T> toOptional() {
+        return this.value != null ? Optional.of(this.value) : Optional.empty();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
